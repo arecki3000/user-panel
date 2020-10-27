@@ -11,7 +11,7 @@ const JumbotronWrapper = styled.div`
   box-shadow: 0 0 40px rgba(49, 92, 173, 0.12);
   border-radius: 25px;
   @media (max-width: 768px) {
-    grid-template-rows: 184px 118px 33px 1fr;
+    grid-template-rows: 184px 118px 33px 1fr 1fr;
   }
 `;
 
@@ -57,27 +57,64 @@ const QuoteContainer = styled.div`
   font-weight: 400;
   color: #ffffff;
   @media (max-width: 768px) {
-    grid-row: 3 / 5;
+    grid-row: 5 / 6;
     grid-column: 1 / 4;
     text-align: center;
+    padding: 0;
     justify-content: center;
     align-items: flex-start;
     color: #3e495e;
-    padding: 40px;
   }
 `;
+
+const UserName = styled.div`
+  grid-row: 3 / 5;
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .name {
+    color: #3e495e;
+    font-size: 27px;
+    padding-bottom: 10px;
+    font-family: "Proxima Nova - Semibold";
+  }
+  .city {
+    color: #929cae;
+    font-size: 16px;
+    font-family: "Poppins-Regular";
+    line-height: 22px;
+  }
+  @media (max-width: 768px) {
+    padding: 10px;
+    grid-row: 4 / 5;
+  }
+`;
+
+const Tokens = styled.div``;
+
+const Buttons = styled.div``;
 
 export const Jumbotron = () => {
   return (
     <JumbotronWrapper>
       <JumbotronCoverImage />
+
+      <AvatarContainer>
+        <Avatar />
+      </AvatarContainer>
+
+      <Tokens />
+      <UserName>
+        <div className="name">Imię Nazwisko</div>
+        <div className="city">San Francisko, CA</div>
+      </UserName>
       <QuoteContainer>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
         accusamus?
       </QuoteContainer>
-      <AvatarContainer>
-        <Avatar />
-      </AvatarContainer>
+      <Buttons />
     </JumbotronWrapper>
   );
 };
