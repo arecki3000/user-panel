@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { Nav, PageWrapper, Jumbotron } from "./components/index";
+import { Nav, PageWrapper, Jumbotron, Content } from "./components/index";
 
 export default function App() {
   return (
@@ -8,6 +8,7 @@ export default function App() {
       <Nav />
       <PageWrapper>
         <Jumbotron />
+        <Content />
       </PageWrapper>
     </div>
   );

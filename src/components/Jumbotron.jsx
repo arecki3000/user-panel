@@ -15,6 +15,7 @@ const JumbotronWrapper = styled.div`
   background-color: #ffffff;
   box-shadow: 0 0 40px rgba(49, 92, 173, 0.12);
   border-radius: 25px;
+  margin-bottom: 32px;
   @media (max-width: 1030px) {
     grid-template-rows: 184px 118px 33px 1fr 1fr;
   }
